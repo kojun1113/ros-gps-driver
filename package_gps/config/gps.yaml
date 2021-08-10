@@ -1,0 +1,24 @@
+
+rate: 20   # [Hertz]
+
+port : /dev/ttyUSB0 # default /dev/ttyUSB0
+ 
+baud : 115200  # default 4800
+
+use_GNSS_time : false   # default false // if you need the GPS time turn to true
+
+# only receive GPGGA GPRMC
+
+# detail difference in navsatfix.status.status => fix style between GGA and RMC
+
+# navsatfix.status.service is manually setted in GPS / consider BEIDOU in SERVICE_COMPASS ??
+
+# check /gps/fix data validation in fix.status.status 
+
+# !!! magnificant difference between GGA and RMC in 
+
+# altitude and covariance
+
+# altitude: in RMC => 0, in GGA => correct data!!!!!!
+
+# covariance: in RMC => no data, in GGA => position_covariance
